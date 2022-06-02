@@ -16,7 +16,7 @@ pipeline {
 			steps {
 				sh 'mvn --version'
 				sh 'docker version'
-				sudo echo "Build"
+				echo "Build"
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
 				echo "BUILD_ID - $env.BUILD_ID"
@@ -53,7 +53,7 @@ pipeline {
 			steps {
 				//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("niraniasandeep/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 
 			}
