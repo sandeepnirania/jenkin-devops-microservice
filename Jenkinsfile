@@ -16,7 +16,7 @@ pipeline {
 			steps {
 				sh 'mvn --version'
 				sh 'docker version'
-				echo "Build"
+				sudo echo "Build"
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
 				echo "BUILD_ID - $env.BUILD_ID"
